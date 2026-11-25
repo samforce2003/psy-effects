@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>心理学效应手册 · 30个你每天都会撞上的心理规律</title>
+<meta name="description" content="30个常见心理学效应的人话解释：锚定效应、沉没成本、幸存者偏差、达克效应……每个都有生活例子和怎么防，搜索即得。">
+<style>
+:root{--bg:#0f1117;--card:#181b24;--card2:#1f2330;--line:#2a2f3d;--tx:#e8eaf0;--tx2:#9aa3b5;--acc:#5b8cff;--warn:#ffb454;--ok:#4ade80;}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6;padding-bottom:60px;}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px;}
+header{padding:28px 0 8px;}
+h1{font-size:22px;line-height:1.35;font-weight:700;}
+.sub{color:var(--tx2);font-size:13px;margin-top:6px;}
+.search{margin:18px 0 12px;}
+.search input{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--tx);font-size:15px;outline:none;}
+.search input:focus{border-color:var(--acc);}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px;}
+.chip{padding:6px 13px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--tx2);font-size:13px;cursor:pointer;user-select:none;}
+.chip.on{background:var(--acc);border-color:var(--acc);color:#fff;}
+.count{color:var(--tx2);font-size:12px;margin:10px 0 14px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px;cursor:pointer;transition:border-color .15s;}
+.card:hover{border-color:#3a4153;}
+.card .top{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;}
+.card .nm{font-size:17px;font-weight:700;}
+.card .en{font-size:12px;color:var(--tx2);}
+.card .tag{font-size:11px;color:var(--acc);border:1px solid #33436e;background:#1a2136;border-radius:5px;padding:1px 7px;margin-left:auto;}
+.card .one{margin-top:8px;font-size:14px;color:var(--warn);font-weight:600;}
+.card .body{display:none;margin-top:10px;border-top:1px dashed var(--line);padding-top:10px;font-size:14px;}
+.card.open .body{display:block;}
+.card .body b{color:var(--acc);}
+.card .body .k{color:var(--tx2);font-size:13px;}
+.hint{color:var(--tx2);font-size:12px;text-align:center;margin-top:4px;}
+.empty{color:var(--tx2);text-align:center;padding:40px 0;font-size:14px;}
+.hook{margin-top:26px;background:linear-gradient(135deg,#1a2136,#12182a);border:1px solid #33436e;border-radius:14px;padding:18px;}
+.hook h3{font-size:16px;margin-bottom:6px;}
+.hook p{font-size:13px;color:var(--tx2);}
+.hook .cta{display:inline-block;margin-top:10px;background:var(--acc);color:#fff;padding:9px 18px;border-radius:9px;font-size:14px;font-weight:600;text-decoration:none;}
+footer{margin-top:24px;color:var(--tx2);font-size:11px;border-top:1px solid var(--line);padding-top:14px;}
+footer p{margin-bottom:6px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>心理学效应手册</h1>
+<div class="sub">30 个你每天都会撞上的心理规律 · 人话版：是什么 → 生活例子 → 怎么用/怎么防</div>
+</header>
+
+<div class="search"><input id="q" type="search" placeholder="搜：锚定 / 沉没成本 / 幸存者偏差 / 达克效应…" autocomplete="off"></div>
+<div class="chips" id="chips"></div>
+<div class="count" id="count"></div>
+<div id="list"></div>
+
+<div class="hook">
+<h3>想要可打印的深度版？</h3>
+<p>这 30 个效应只是「人话速查」。深度版《30 个心理学效应·实操手册》每个效应多 3 倍内容：完整实验出处、职场/销售/亲密关系三个场景的落地话术、反面案例清单。9.9 元 PDF，一次买断。</p>
+<p style="margin-top:6px;color:#8b93a8">（工具本身永远免费；深度版走知识星球「林小黑·认知工具箱」，圈内 9.9 元入圈一次拿全 + 持续更新）</p>
+</div>
+
+<footer>
+<p>本手册只做「心理规律 → 人话」的科普翻译，不构成医疗、投资、法律或任何专业建议；是否采纳是你自己的事，概不负责。</p>
+<p>作者：林小黑（AI 独立研究者）· 数据全部本地内联、不采集任何输入。</p>
+</footer>
+</div>
+
+<script>
+var EFFECTS = [
+{name:"锚定效应",en:"Anchoring",cat:"认知偏差",one:"先看到的价格，会变成你心里的「基准价」。",def:"人对一件事的判断会被最先接触到的那个数字/信息「锚」住，之后的调整都不自觉地围着它打转。",eg:"商场标价 999 再划线到 299，你觉得捡了便宜——其实 299 才是真实价，999 只是来锚你的。",how:"【用】报价先报高的，再给「折扣」，对方会以高锚为基准。【防】买东西先查市场价再进店；谈判时先想清楚自己的底线数字，别被对方第一个数带跑。"},
+{name:"沉没成本谬误",en:"Sunk Cost Fallacy",cat:"认知偏差",one:"「都花了这么多了，不能停」——可那笔钱已经回不来了。",def:"因为已经投入了钱/时间/感情，就不愿意放弃，继续往一个本不该继续的事里加注。",eg:"电影看一半发现是烂片，却因为「票钱都花了」硬看完；一段早该分的关系因为「谈了三年」死撑。",how:"【防】做决定只问「未来还值不值得」，不问「过去花了多少」。已投入的收不回，它不该再影响你下一步。"},
+{name:"幸存者偏差",en:"Survivorship Bias",cat:"认知偏差",one:"你看到的都是「活下来的」，没活下来的你看不见。",def:"只盯着成功/幸存者总结规律，忽略了大量失败样本，得出的结论天然偏乐观。",eg:"「比尔·盖茨退学也能成功，所以读书没用」——你没看到千万个退学后混得差的人。",how:"【防】问一句「那些没被看见的人呢？」做决策前，主动去找失败案例当分母。"},
+{name:"确认偏误",en:"Confirmation Bias",cat:"认知偏差",one:"人只看得见自己愿意相信的证据。",def:"大脑会自动收集、放大支持你已有观点的信息，屏蔽或贬低相反的信息。",eg:"认定某支股票要涨，就只刷看多的分析，把唱空的都当「不懂行」。",how:"【防】刻意去找「我错在哪」的证据；重大决定前，逼自己列出三个反对理由。"},
+{name:"可得性启发",en:"Availability Heuristic",cat:"认知偏差",one:"越想得起的事，你越觉得它常发生。",def:"人用「能不能快速想起例子」来判断一件事发生的概率，于是被新闻和记忆绑架。",eg:"飞机失事被反复报道，你就觉得坐飞机比开车危险——实际车祸死亡率高得多。",how:"【防】区分「印象深刻」和「发生频率」；判断概率时去查真实数据，别信直觉。"},
+{name:"达克效应",en:"Dunning-Kruger",cat:"认知偏差",one:"越不懂的人越自信，越懂的人越觉得自己不行。",def:"能力不足的人高估自己（因为连「自己不懂」都识别不了），高手反而低估自己（因为知道还有多少不知道）。",eg:"刚学两天的人敢指导别人投资；真专家说话总带「看情况、不一定」。",how:"【防】用「我是不是连问题都还没问对」自检；对特别笃定的人留个心眼，对真专家多听「但书」。"},
+{name:"框架效应",en:"Framing Effect",cat:"认知偏差",one:"同一件事，换个说法，你的选择就变了。",def:"人对「损失」和「收益」的表述敏感度不同，同一信息换框架会引发相反决策。",eg:"「手术成功率 90%」和「死亡率 10%」是同一件事，前者让人安心。",how:"【用】想说服人，把好处用「得到」框架说。【防】听到数字时，自动换算成它的反面再判断一次。"},
+{name:"光环效应",en:"Halo Effect",cat:"认知偏差",one:"一个人一项好，你就觉得他样样都好。",def:"对某人/某物某一特质的印象，会「晕染」到对他其他所有特质的判断。",eg:"长得好看或名校毕业的人，你下意识觉得他能力也强、人品也好。",how:"【防】把人拆开看：这项能力好，不代表那项也好。招聘/择偶时按维度打分，别被第一印象一票通过。"},
+{name:"基本归因错误",en:"Fundamental Attribution Error",cat:"认知偏差",one:"别人犯错是他「人不行」，我犯错是「环境逼的」。",def:"解释他人行为时过度归因于性格，解释自己行为时过度归因于处境。",eg:"同事迟到=「不靠谱」；我迟到=「今天堵车」。",how:"【防】判断他人前先补一句「他当时处在什么处境」。给别人留情境解释，是减少误判最快的办法。"},
+{name:"自我服务偏差",en:"Self-serving Bias",cat:"认知偏差",one:"成功是我的功劳，失败是运气不好。",def:"人倾向于把成功归给自己、把失败推给外部，来保护自尊。",eg:"考试考好是「我努力」，考砸是「题太偏」。",how:"【防】复盘时强制列「我到底做了什么导致这个结果」，尤其失败时。归因越诚实，下次改得越准。"},
+{name:"损失厌恶",en:"Loss Aversion",cat:"决策",one:"丢 100 块的痛，比捡 100 块的爽强得多。",def:"人对损失的敏感度约为收益的 2 倍，所以「怕失去」比「想得到」更能驱动行为。",eg:"免费试用期结束自动续费，很多人懒得取消，因为「取消」被感受成一种损失。",how:"【用】催人行动，强调「不做的损失」比「做了的好处」更有效。【防】识别那些「怕失去」的设计（限时/名额），先问自己：我本来需要吗？"},
+{name:"现状偏好",en:"Status Quo Bias",cat:"决策",one:"「不变」本身就是最大的诱惑。",def:"人倾向于维持现状，因为改变意味着不确定，而不确定被大脑当成潜在损失。",eg:"默认选项的勾选率远高于主动选择——大部分人懒得改，也怕改了吃亏。",how:"【防】定期问「如果我今天从零开始，还会选现在这个吗？」。重要的默认设置（保险/订阅）主动检查一次。"},
+{name:"双曲贴现",en:"Hyperbolic Discounting",cat:"决策",one:"现在的一颗糖，胜过下个月的一袋糖。",def:"人对「当下」的奖励估值异常高，对「未来」的奖励疯狂打折，导致拖延和短视。",eg:"明知该存钱却先剁手；明知该健身却躺平刷手机——都是把未来的好日子打了折。",how:"【防】把远期目标「拆近」：今天只做 5 分钟；用环境设计锁住未来的自己（自动储蓄、卸载 App）。"},
+{name:"零和思维",en:"Zero-sum Thinking",cat:"决策",one:"「你赢了就是我输了」——其实很多局能一起赢。",def:"把利益关系看成固定蛋糕，一人多得另一人必少得，忽略了合作能把蛋糕做大的可能。",eg:"同事升职了就觉得「机会被抢了」，而不是「团队更强了」。",how:"【防】遇到利益冲突先问「有没有把蛋糕做大的玩法」；警惕自己一上来就摆出「争夺」姿势。"},
+{name:"承诺升级",en:"Escalation of Commitment",cat:"决策",one:"越输越加注，因为不想承认前面错了。",def:"面对「事情在变坏」的证据，人反而加大投入，试图用更大的投入证明之前的决策没错。",eg:"项目越做越亏还继续砸钱；赌博输了想一把回本。",how:"【防】设定「止损线」并在开始前写下来；到了线就问第三方「如果是你的钱，你还投吗？」"},
+{name:"破窗效应",en:"Broken Windows",cat:"情绪社交",one:"一扇破窗没人修，很快整条街都是破窗。",def:"环境中的小乱象被放任，会传递「没人管」的信号，诱发更大范围的失序。",eg:"楼道里第一张乱贴的广告没人撕，很快贴满；一条朋友圈开了先例，团队纪律就松了。",how:"【用】管团队先管「第一个小违规」。【防】自己处在脏乱差/无人守规矩的环境里，警惕被「带节奏」，及时抽身。"},
+{name:"旁观者效应",en:"Bystander Effect",cat:"情绪社交",one:"围观的人越多，越没人出手。",def:"在场人数越多，每个人「别人会管」的心理越强，反而没人行动；责任被稀释。",eg:"街头有人倒地，人越多越可能没人打 120。",how:"【防】求助时别喊「谁来帮帮我」，指定一个人：「穿红衣服的先生，请帮我打 120」。点名，责任就落回那个人身上。"},
+{name:"责任分散",en:"Diffusion of Responsibility",cat:"情绪社交",one:"「反正不是我一个人的事」——于是没人负责。",def:"群体任务中，每个人都觉得自己责任变小，整体执行力反而下降。",eg:"群聊里 @所有人 问「谁来」，常常没人回；私下单点一个人，马上就有回应。",how:"【防】布置任务永远落到具体人名和截止时间；自己被拉进「大家一起」的活儿里，先确认自己到底负责哪一块。"},
+{name:"登门槛效应",en:"Foot-in-the-Door",cat:"情绪社交",one:"先提个小请求，答应了，大请求就好办。",def:"人一旦答应了小请求，会为了维持「前后一致」的自我形象，更可能答应后续更大的请求。",eg:"先让你填个问卷，再让你注册，再让你付费——一步步台阶。",how:"【用】谈合作先要一个小到不可能拒绝的动作。【防】警惕「先答应小要求」的连环套路，随时可以喊停，一致性不欠任何人。"},
+{name:"富兰克林效应",en:"Ben Franklin Effect",cat:"情绪社交",one:"想让人喜欢你，不是帮他，是让他帮你一个忙。",def:"人帮了你之后，会为自己找理由「我为什么帮他？因为我挺喜欢他」，从而更喜欢你。",eg:"让同事帮你个小忙，比你去讨好他更能拉近关系。",how:"【用】求助要小、要具体、不给人负担。【防】别人对你过分热情还总「顺手帮你」，留意是不是在经营你的好感。"},
+{name:"互惠原理",en:"Reciprocity",cat:"情绪社交",one:"收了别人的好，就总想还回去。",def:"人天生有「回报」的冲动，收到恩惠会本能地想要对等回馈，哪怕恩惠是强塞的。",eg:"超市免费试吃后你更想买；销售先送你小样，你就不好意思拒绝他。",how:"【用】先给价值再提请求。【防】分清「真心的好」和「钓鱼的饵」，收了免费的东西，拒绝时照样理直气壮。"},
+{name:"首因效应",en:"Primacy Effect",cat:"情绪社交",one:"第一印象，往往就是最终印象。",def:"最先接触到的信息对整体判断影响最大，后面的信息很难覆盖它。",eg:"面试前 30 秒的印象，很大程度上决定了后面的走向。",how:"【用】重要场合前 30 秒主动「开场白设计」。【防】评价他人时提醒自己：这是第一印象，给第二次机会再下结论。"},
+{name:"皮格马利翁效应",en:"Pygmalion Effect",cat:"情绪社交",one:"你越相信一个人行，他越可能真行。",def:"他人（尤其是权威）的高期待，会通过态度和反馈传递，真的提升对方的表现；也叫罗森塔尔效应。",eg:"老师相信某个学生「有潜力」，多给他机会，这学生成绩真的上去。",how:"【用】对孩子/下属给「我相信你能做到」+具体支持，比「你要努力」有用得多。【防】警惕别人用「你不行」的标签压你，也警惕自己把「高期待」变成「高压」。"},
+{name:"简单曝光效应",en:"Mere Exposure",cat:"情绪社交",one:"见多了，就顺眼了。",def:"人对反复接触的事物会产生熟悉感，熟悉感又被大脑误当成好感。",eg:"一首歌第一遍难听，多听几遍就「上头」；广告重复多了，你就觉得这牌子靠谱。",how:"【用】想让人接受你/你的产品，高频、低压地出现。【防】警惕「熟悉=正确」的错觉——反复刷到的观点不一定对，只是它曝光多。"},
+{name:"蔡格尼克效应",en:"Zeigarnik Effect",cat:"记忆学习",one:"没做完的事，比做完的更让你惦记。",def:"人对未完成任务的心理紧张感会持续占据注意力，完成后反而很快忘记。",eg:"追到一半的剧一直想；没回的消息一直挂心上。",how:"【用】想记住/推进一件事，先开个头别收尾。【防】睡前把「没做完的事」写下来清空大脑，否则它会在夜里反复骚扰你。"},
+{name:"艾宾浩斯遗忘曲线",en:"Forgetting Curve",cat:"记忆学习",one:"学完 20 分钟，你就忘了一半。",def:"记忆会随时间指数式衰减，遗忘最快的时段就在刚学完的头几十分钟到一天内。",eg:"考前突击的内容，考完一周几乎清零。",how:"【用】用「间隔复习」对抗遗忘：学完当天、隔 1 天、隔 3 天、隔 1 周各复习一次，记忆留存率大幅提升。"},
+{name:"谷歌效应",en:"Google Effect",cat:"记忆学习",one:"能搜到的，大脑就懒得记。",def:"当人知道信息可以随时查到时，反而记得更差，记的是「去哪查」而不是内容本身；也叫数字失忆。",eg:"背不下来的号码，反正手机里有，就彻底不背了。",how:"【防】别把「收藏了」当「学会了」。关键知识强迫自己不看手机复述一遍，才知道是不是真的会。"},
+{name:"睡眠者效应",en:"Sleeper Effect",cat:"记忆学习",one:"过段时间，你会忘了这话是谁说的，只记得内容。",def:"信息的来源可信度随时间衰减，而信息本身的影响保留下来——低可信度来源的话，时间久了也可能被采信。",eg:"刷到一条来源不明的「养生说法」，当下不信，几周后却模糊地当成常识。",how:"【防】对来源不明的信息，记下来源标签；隔段时间回看时，优先核实「这话到底谁说的」。"},
+{name:"生成效应",en:"Generation Effect",cat:"记忆学习",one:"自己想出来的，比抄下来的记得牢。",def:"主动生成信息（自己总结、自己举例）比被动接收（阅读、抄写）留下的记忆更深刻。",eg:"听课记笔记，用自己的话复述一遍，比逐字抄板书有用得多。",how:"【用】学任何东西，合上资料，用自己的话讲一遍或举个自己的例子——这步最省不了。"},
+{name:"测试效应",en:"Testing Effect",cat:"记忆学习",one:"考试不是检验，是最强的复习。",def:"主动「回忆提取」（测试、默写、问答）比反复阅读更能巩固记忆，即使答错也有用。",eg:"反复翻书感觉都会，一合上书就卡壳——因为翻书是「再认」，测试才是「提取」。",how:"【用】用「自测」代替「重读」：学完立刻默写/自问自答，比再看三遍都管用。"}
+];
+
+var CATS = ["全部","认知偏差","决策","情绪社交","记忆学习"];
+var cur = "全部", q = "";
+
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+
+function renderChips(){
+  var h = CATS.map(function(c){
+    return '<span class="chip'+(c===cur?' on':'')+'" data-c="'+esc(c)+'">'+esc(c)+'</span>';
+  }).join("");
+  document.getElementById("chips").innerHTML = h;
+}
+
+function render(){
+  var list = EFFECTS.filter(function(e){
+    var okC = cur==="全部" || e.cat===cur;
+    var okQ = !q || (e.name+e.en+e.one+e.def+e.eg+e.how).toLowerCase().indexOf(q.toLowerCase())>=0;
+    return okC && okQ;
+  });
+  document.getElementById("count").textContent = "共 "+list.length+" 个效应"+(q?"（搜「"+esc(q)+"」）":"");
+  if(!list.length){
+    document.getElementById("list").innerHTML = '<div class="empty">没搜到，换个词试试（如：锚定 / 损失 / 记忆）</div>';
+    return;
+  }
+  var h = list.map(function(e){
+    return '<div class="card" data-id="'+esc(e.name)+'">'
+      +'<div class="top"><span class="nm">'+esc(e.name)+'</span><span class="en">'+esc(e.en)+'</span><span class="tag">'+esc(e.cat)+'</span></div>'
+      +'<div class="one">'+esc(e.one)+'</div>'
+      +'<div class="body">'
+      +'<p><b>是什么</b><br>'+esc(e.def)+'</p>'
+      +'<p style="margin-top:8px"><b>生活例子</b><br>'+esc(e.eg)+'</p>'
+      +'<p style="margin-top:8px"><b>怎么用 / 怎么防</b><br>'+esc(e.how)+'</p>'
+      +'</div></div>';
+  }).join("");
+  document.getElementById("list").innerHTML = h;
+}
+
+document.getElementById("q").addEventListener("input", function(ev){ q = ev.target.value.trim(); render(); });
+document.getElementById("chips").addEventListener("click", function(ev){
+  var t = ev.target; if(!t.classList.contains("chip")) return;
+  cur = t.getAttribute("data-c"); renderChips(); render();
+});
+document.getElementById("list").addEventListener("click", function(ev){
+  var c = ev.target.closest(".card"); if(!c) return;
+  c.classList.toggle("open");
+});
+
+renderChips(); render();
+</script>
+</body>
+</html>
